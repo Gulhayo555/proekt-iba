@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap"
+    rel="stylesheet"
+  />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+  crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+      <!-- preloader -->
+      <div class="preloader">
+        <div class="loader">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+  
+      <div id="progress" :style="progressStyle">
+        <span id="progress-value">
+          <i class="fas fa-long-arrow-alt-up"></i>
+        </span>
+      </div>
+    <div class="header">
+        <div class="search-popup" id="search-popup">
+            <button  class="close-search">
+              <i class="fas fa-times"></i>
+            </button>
+            <form action="#" method="post">
+              <div class="form-group">
+                <input
+                  type="search"
+                  name="search-field"
+                  value=""
+                  placeholder="Search Here"
+                  required
+                  id=""
+                />
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </div>
+            </form>
+          </div>
+          <!-- serach-popup end -->
+          <nav class="inner-header">
+            <div class="container">
+              <div class="top-bar">
+                <div class="top-bar_row aligin-items-center">
+                  <div class="row-col-xl-5">
+                    <div class="row-time">
+                      <div class="row_icon">
+                        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg
+                          width="24px"
+                          height="24px"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5001M17.6859 17.69L18.5 18.5001M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z"
+                            stroke="#fbc50b"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <h4>Sunrise At<b>:4:44AM</b></h4>
+                      </div>
+                      <div class="row_icon">
+                        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg
+                          width="24px"
+                          height="24px"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M13 6V3M18.5 12V7M14.5 4.5H11.5M21 9.5H16M15.5548 16.8151C16.7829 16.8151 17.9493 16.5506 19 16.0754C17.6867 18.9794 14.7642 21 11.3698 21C6.74731 21 3 17.2527 3 12.6302C3 9.23576 5.02061 6.31331 7.92462 5C7.44944 6.05072 7.18492 7.21708 7.18492 8.44523C7.18492 13.0678 10.9322 16.8151 15.5548 16.8151Z"
+                            stroke="#fbc50b"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <h4>Sunrise At<b>:7:35PM</b></h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-2">
+                    <div>
+                      <ul class="social-media">
+                        <li>
+                          <a class="media_icon" href=""
+                            ><i class="fab fa-facebook-f icon"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a class="media_icon twit" href=""
+                            ><i class="fab fa-twitter icon"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a class="media_icon" href=""
+                            ><i class="fab fa-linkedin"></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class=" map_location">
+                    <div class="d-flex align-items-center">
+                      <div class="location">
+                        <a href=""
+                          ><i>
+                            <svg
+                              width="24px"
+                              height="24px"
+                              viewBox="-4 0 32 32"
+                              version="1.1"
+                              xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                            >
+                              <g
+                                stroke="none"
+                                stroke-width="1"
+                                fill="none"
+                                fill-rule="evenodd"
+                              >
+                                <g
+                                  transform="translate(-104.000000, -411.000000)"
+                                  fill="#fbc50b"
+                                >
+                                  <path
+                                    d="M116,426 C114.343,426 113,424.657 113,423 C113,421.343 114.343,420 116,420 C117.657,420 119,421.343 119,423 C119,424.657 117.657,426 116,426 L116,426 Z M116,418 C113.239,418 111,420.238 111,423 C111,425.762 113.239,428 116,428 C118.761,428 121,425.762 121,423 C121,420.238 118.761,418 116,418 L116,418 Z M116,440 C114.337,440.009 106,427.181 106,423 C106,417.478 110.477,413 116,413 C121.523,413 126,417.478 126,423 C126,427.125 117.637,440.009 116,440 L116,440 Z M116,411 C109.373,411 104,416.373 104,423 C104,428.018 114.005,443.011 116,443 C117.964,443.011 128,427.95 128,423 C128,416.373 122.627,411 116,411 L116,411 Z"
+                                  ></path>
+                                </g>
+                              </g>
+                            </svg> </i></a
+                        ><span> New Street Town 2445x United State</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="navbar">
+                <div class="logo">
+                  <a href="">
+                    <img src="https://winsfolio.net/html/ibadah/assets/img/logo.png" alt="logo" />
+                  </a>
+                </div>
+                <div class="bar-menu">
+                  <i class="fas fa-bars"></i>
+                </div>
+                <ul class="navbar-links">
+                  <li class="navbar-dropdown">
+                    <a href="#">Home</a>
+                    <div class="dropdown">
+                      <a href="#">home 1</a>
+                      <a href="#">home 2</a>
+                    </div>
+                  </li>
+                  <li class="navbar-dropdown"><a href="#">About</a></li>
+                  <li class="navbar-dropdown">
+                    <a href="#">Courses</a>
+                    <div class="dropdown">
+                      <a href="#!">our courses</a>
+                      <a href="#">courses details</a>
+                    </div>
+                  </li>
+                  <li class="navbar-dropdown">
+                    <a href="#">Campaigns</a>
+                    <div class="dropdown">
+                      <a href="#">our campaigns</a>
+                      <a href="#">campaign details</a>
+                    </div>
+                  </li>
+                  <li class="navbar-dropdown">
+                    <a href="#">Pages</a>
+                    <div class="dropdown">
+                      <a href="#">our scholar</a>
+                      <a href="#">scholar details</a>
+                      <a href="#">our events</a>
+                      <a href="#">pricing packages</a>
+                      <a href="#">404</a>
+                    </div>
+                  </li>
+                  <li class="navbar-dropdown">
+                    <a href="#">News</a>
+                    <div class="dropdown">
+                      <a href="#">our blog</a>
+                      <a href="#">blog details</a>
+                    </div>
+                  </li>
+                  <li class="navbar-dropdown"><a href="#">Contact</a></li>
+                </ul>
+                <div class="navbar-header-search">
+                  <a href="callto:+(00)123-345-11"
+                    ><i class="fas fa-headphones-alt icon"></i>+(00)123-345-11</a
+                  >
+                  <div class="navbar-search" >
+                    <a href="#!">
+                      <svg
+                        height="24"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g id="_12" data-name="12">
+                          <path
+                            d="m21.71 20.29-2.83-2.82a9.52 9.52 0 1 0 -1.41 1.41l2.82 2.83a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zm-17.71-8.79a7.5 7.5 0 1 1 7.5 7.5 7.5 7.5 0 0 1 -7.5-7.5z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom-bar"></div>
+            </div>
+        
+            <div
+             class="mobile-nav" 
+              id="mobile-nav"
+              style="display: block"
+            >
+              <div class="res-log">
+                <a href="#">
+                  <img
+                    src="https://winsfolio.net/html/ibadah/assets/img/logo.png"
+                    alt="Responsive Logo"
+                    class="white-logo"
+                  />
+                </a>
+              </div>
+            
+              <ul  >
+                <li   
+                  class="menu-item-has-children" > <a href="#!">Home</a>
+                  <ul class="sub-menu" >
+                    <li><a href="#">HOME 1  </a></li>
+                    <li><a href="#!"> HOME 2</a></li>
+          
+                  </ul>
+                </li>
+                <li><a href="#">about</a></li>
+               <li class="menu-item-has-children"
+                 >
+                  <a href="#!">Courses</a> 
+                 <ul class="sub-menu">
+                    <li><a href="#">our courses</a></li>
+                    <li><a href="#">courses details</a></li>
+                  </ul> 
+              </li>  
+                 <li
+                  class="menu-item-has-children" >
+                  <a href="#!">campaigns</a> 
+               <ul class="sub-menu">
+                    <li><a href="#">our campaigns</a></li>
+                    <li><a href="#">campaign details</a></li>
+                  </ul> 
+                </li> 
+                <li
+                  class="menu-item-has-children" 
+                > 
+                 <a href="#!">pages</a>
+                   <ul class="sub-menu">
+                    <li><a href="#">our scholar</a></li>
+                    <li><a href="#">scholar details</a></li>
+                    <li><a href="#">our events</a></li>
+                    <li><a href="#">pricing packages</a></li>
+                    <li><a href="#">404</a></li>
+                  </ul> 
+                </li>
+               <li
+                   class="menu-item-has-children"
+                >
+                  <a href="#!">News</a> 
+                  <ul class="sub-menu">
+                    <li><a href="#">our blog</a></li>
+                    <li><a href="#">blog details</a></li>
+                  </ul> 
+              </li> 
+                <li><a href="#">Contact</a></li>
+              </ul>
+              <div id="res-cross"></div>
+            </div>
+          </nav>
+          <div class="owl-carousel">
+            <div>  
+                <div class="item">
+                    <div class="container">
+                      <div class="item_title">
+                        <div class="item_box">
+                          <div class="hero-text">
+                            <h1>Allah is the Best of Providers</h1>
+                            <p>
+                              When things are too hard to handle, retreat & count your
+                              blessings instead
+                            </p>
+                            <a href="#!" class="hero_btn">Discover Courses</a>
+                          </div>
+                        </div>
+                        <div class="item_box-img">
+                          <div class="hero-img">
+                            <img src="https://winsfolio.net/html/ibadah/assets/img/hero-img-1.png" alt="" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img class="item_img" src="https://winsfolio.net/html/ibadah/assets/img/hero-img-back-2.jpg" alt="" />
+                  </div>
+             </div>
+            <div> 
+                <div class="item">
+                    <div class="container">
+                      <div class=" item_title">
+                        <div class="item_box">
+                          <div class="hero-text">
+                            <h1>Allah is the Best of Providers</h1>
+                            <p>
+                              When things are too hard to handle, retreat & count your
+                              blessings instead
+                            </p>
+                            <a href="#!" class="hero_btn">Discover Courses</a>
+                          </div>
+                        </div>
+                        <div class="item_box-img">
+                          <div class="hero-img">
+                            <img src="https://winsfolio.net/html/ibadah/assets/img/hero-img-1.png" alt="" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img
+                      class="item_img"
+                      src="https://winsfolio.net/html/ibadah/assets/img/hero-img-back-1.jpg"
+                      alt=""
+                    />
+                  </div>
+            </div>
+            <div>  
+                <div class="item">
+                    <div class="container">
+                      <div class="item_title">
+                        <div class="item_box">
+                          <div class="hero-text">
+                            <h1>Allah is the Best of Providers</h1>
+                            <p>
+                              When things are too hard to handle, retreat & count your
+                              blessings instead
+                            </p>
+                            <a href="#!" class="hero_btn">Discover Courses</a>
+                          </div>
+                        </div>
+                        <div class="item_box-img">
+                          <div class="hero-img">
+                            <img src="https://winsfolio.net/html/ibadah/assets/img/hero-img-1.png" alt="" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <img
+                      class="item_img"
+                      src="https://winsfolio.net/html/ibadah/assets/img/hero-img.jpg"
+                      alt=""
+                    />
+                  </div>
+             </div>
+          </div>
+    </div>
+
+
+     <section class="timing_gap">
+        <div class="container">
+            <div class="namaz-timing ">
+                <div class="namaz-time">
+                    <img src="https://winsfolio.net/html/ibadah/assets/img/namaz-time-icon-1.png" alt="">
+                    <h4>Fajr</h4>
+                    <h5>3:24 AM <span>Iqamah:4:15 AM</span></h5>
+                   
+                </div>
+                <div class="namaz-time">
+                    <img src="https://winsfolio.net/html/ibadah/assets/img/namaz-time-icon-2.png" alt="">
+                    <h4>Zuhr</h4>
+                    <h5>01:09 PM <span>Iqamah:1:30 PM</span></h5>
+                   
+                </div>
+                <div class="namaz-time">
+                    <img src="https://winsfolio.net/html/ibadah/assets/img/namaz-time-icon-3.png" alt="">
+                    <h4>Asr</h4>
+                    <h5>6:29 PM <span>Iqamah:7:30 PM</span></h5>
+                </div>
+                <div class="namaz-time">
+                    <img src="https://winsfolio.net/html/ibadah/assets/img/namaz-time-icon-4.png" alt="">
+                    <h4>Magrib</h4>
+                    <h5>9:01 PM <span>Iqamah:9:01 PM</span></h5>
+                 
+                </div>
+                <div class="namaz-time">
+                    <img src="https://winsfolio.net/html/ibadah/assets/img/namaz-time-icon-5.png" alt="">
+                    <h4>Isha</h4>
+                    <h5>10:10 PM  <span>Iqamah:10:45 PM</span></h5>
+                </div>
+                <div class="namaz-time">
+                    <img src="https://winsfolio.net/html/ibadah/assets/img/namaz-time-icon-6.png" alt="">
+                    <h4>Jummah</h4>
+                    <h5>01:10 PM <span>Iqamah:02:45 PM</span></h5>
+                </div>
+            </div>
+        </div>
+    </section>
+     <section>
+        <div class="container">
+          <div class="item_heading">
+            <img src="https://winsfolio.net/html/ibadah/assets/img/heading-img.png" alt="" />
+            <p>WELCOME TO THE ISLAMIC CENTER</p>
+            <h2>Know The Real History of Islam</h2>
+          </div>
+          <div class=" head_descr">
+            <div class="heading_info">
+              <div class="islamic-history">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscsed do eiusmod
+                  tempor incididunt ut labore etedum dolor sit a ad minim veniam,
+                  quis nostr incididunt ut laborcitationn tempor incididunt ut
+                  labore um dolor sit amet, consectetur adipiscsed do eiu agna a
+                  liqua. Ut enim ad minim veniam, quis nostr incididunt ut
+                  laborcitation.
+                </p>
+                <ul class="list">
+                  <li>Astonishing Facilities</li>
+                  <li>Helping CommunitiesLeads</li>
+                  <li>Charity EventsSchooling Children</li>
+                  <li>Feeding Hungry People</li>
+                </ul>
+                <a href="#!" class="head_btn">Read Our History</a>
+              </div>
+            </div>
+            <div class="heading_img">
+              <div class="heading_box ">
+                <div class="heading_img-text">
+                  <div class="circle-text">
+                    <img
+                      src="https://winsfolio.net/html/ibadah/assets/img/text-circle.png"
+                      class="circle-text-img"
+                      alt="circle-img"
+                    />
+                    <figure class="circle-img">
+                      <img src="https://winsfolio.net/html/ibadah/assets/img/circle-img.png" alt="" />
+                    </figure>
+                  </div>
+                  <div class="real-history-book book hoverimg">
+                    <figure>
+                      <img src="https://winsfolio.net/html/ibadah/assets/img/real-history-book.jpg" alt="" />
+                    </figure>
+                  </div>
+                </div>
+                <div class="heading_img-book">
+                  <div class="real-history-book two hoverimg">
+                    <figure>
+                      <img src="./images/real-history-boy.jpg" alt="real-history-boy" />
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+       <section class="education">
+        <div class="container">
+          <div class="educat_box">
+            <div class="educ_cours">
+              <div class="courses hoverimg">
+                <figure>
+                  <img src="https://winsfolio.net/html/ibadah/assets/img/donation-img-1.jpg" alt="">
+                </figure>
+                <div class="community-text">
+                  <div>
+                    <i>
+                                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                      <g>
+                                          <g>
+                                              <path d="M469.731,139.705c6.453-14.712,6.792-31.057,0.952-46.024c-1.724-4.42-6.704-6.608-11.128-4.882
+                                                  c-14.967,5.839-26.763,17.158-33.218,31.87c-1.19,2.712-2.169,5.481-2.942,8.285c-10.543-17.036-23.331-32.683-38.071-46.464
+                                                  c8.15-11.362,12.059-25.08,11.061-39.205c-1.132-16.026-8.436-30.651-20.569-41.183c-3.585-3.112-9.012-2.728-12.121,0.856
+                                                  c-13.05,15.033-17.288,34.755-13.182,52.823c-9.34-5.818-19.177-11.005-29.475-15.471c-4.352-1.886-9.413,0.111-11.302,4.465
+                                                  c-1.888,4.353,0.111,9.414,4.465,11.302c21.793,9.451,41.372,22.362,58.243,37.896c-1.812-0.298-3.645-0.523-5.499-0.659
+                                                  c-16.025-1.165-31.54,3.983-43.693,14.491c-3.589,3.104-3.983,8.53-0.88,12.12c11.879,13.737,28.661,20.78,45.538,20.78
+                                                  c12.313,0,24.675-3.758,35.214-11.394c14.503,21.045,25.143,44.692,31.222,69.767c-7.448,0.115-20.975-1.651-33.073-13.749
+                                                  c-0.183-0.183-0.376-0.359-0.575-0.525c-0.826-0.687-20.524-16.787-46.117-10.961c-19.562,4.452-36.526,20.162-50.524,46.752
+                                                  c-14.769-10.801-46.333-30.527-79.866-30.527c-13.021,0-28.414,2.958-44.711,6.088c-38.549,7.405-86.525,16.623-128.004-8.955
+                                                  c-2.458-1.517-5.514-1.696-8.132-0.478c-2.619,1.218-4.451,3.668-4.877,6.524c-0.449,3.012-10.494,74.438,33.323,132.21
+                                                  c25.671,33.848,64.259,55.615,114.848,64.829c-13.324,13.753-39,35.959-70.916,42.473c-2.352,0.48-4.396,1.922-5.637,3.978
+                                                  s-1.565,4.536-0.895,6.841c0.213,0.732,5.391,18.129,20.786,35.188c13.805,15.299,38.677,33.234,79.404,33.233
+                                                  c1.195,0,2.409-0.016,3.63-0.047c4.365-0.112,7.951-3.48,8.338-7.828c0.037-0.419,4.113-41.462,42.907-69.899h6.07
+                                                  c42.031,0,81.964-18.182,109.562-49.885c27.596-31.703,40.101-73.762,34.306-115.392c-2.826-20.309,6.811-40.042,23.893-50.47
+                                                  c2.046,14.2,2.653,28.743,1.684,43.436c-0.312,4.735,3.273,8.827,8.008,9.14c0.192,0.013,0.384,0.019,0.574,0.019
+                                                  c4.487,0,8.266-3.485,8.566-8.027c2.161-32.775-2.888-64.872-14.007-94.421C454.837,162.307,464.23,152.246,469.731,139.705z
+                                                   M366.262,45.416c-0.576-8.156,1.136-16.124,4.888-23.166c4.704,6.444,7.519,14.092,8.094,22.248
+                                                  c0.576,8.156-1.135,16.123-4.888,23.165C369.652,61.219,366.837,53.571,366.262,45.416z M342.542,115.294
+                                                  c7.046-3.734,15.015-5.425,23.164-4.837c8.15,0.592,15.789,3.419,22.222,8.132C373.469,126.221,355.746,124.936,342.542,115.294z
+                                                   M397.177,271.318c5.108,36.705-5.917,73.788-30.248,101.74c-24.332,27.952-59.541,43.984-96.6,43.984h-8.638
+                                                  c-1.39-0.066-13.789-0.766-25.56-4.894c-4.478-1.573-9.382,0.786-10.951,5.264c-1.571,4.478,0.787,9.38,5.264,10.952
+                                                  c3.563,1.25,7.148,2.233,10.549,3.01c-24.379,23.426-32.734,50.335-35.483,63.381c-48.34-1.566-69.102-32.379-76.444-47.635
+                                                  c40.254-11.942,69.227-43.273,78.294-54.087c1.772,0.076,3.98,0.136,6.558,0.136c17.06,0,49.922-2.636,74.451-20.731
+                                                  c3.818-2.817,4.631-8.197,1.814-12.015c-2.817-3.818-8.196-4.631-12.015-1.814c-27.876,20.565-71.419,17.226-73.758,17.028
+                                                  c-0.802-0.101-1.592-0.214-2.388-0.322c1.055-0.892,2.066-1.809,2.998-2.742c3.356-3.356,3.356-8.796,0-12.151
+                                                  c-3.356-3.356-8.796-3.356-12.151,0c-3.899,3.899-10.759,8.095-15.038,10.475c-9.528-2.235-18.536-4.98-27.011-8.241
+                                                  c3.524-1.688,7.111-3.77,10.497-6.344c3.778-2.871,4.513-8.261,1.642-12.039c-2.87-3.777-8.26-4.513-12.039-1.642
+                                                  c-8.027,6.101-18.076,8.56-22.688,9.419c-8.852-5.008-16.95-10.724-24.271-17.149c7.691-1.259,16.614-3.65,25.101-8.152
+                                                  c4.192-2.224,5.787-7.425,3.563-11.618c-2.225-4.192-7.427-5.788-11.618-3.563c-12.07,6.404-25.847,7.398-32.384,7.471
+                                                  c-1.031-1.258-2.047-2.528-3.034-3.825c-5.155-6.779-9.464-13.814-13.085-20.923c4.046,0.387,8.62,0.662,13.461,0.662
+                                                  c9.182,0,19.313-0.989,28.571-4.075c4.502-1.501,6.935-6.367,5.435-10.869c-1.502-4.502-6.367-6.936-10.869-5.435
+                                                  c-15.661,5.219-35.659,2.823-44.461,1.348c-3.101-8.774-5.304-17.42-6.844-25.606c10.769,3.425,27.226,6.951,49.378,6.951
+                                                  c4.745,0,8.592-3.847,8.592-8.592c0-4.745-3.847-8.592-8.592-8.592c-27.464,0-44.834-5.954-51.996-9.042
+                                                  c-0.757-8.908-0.817-16.674-0.631-22.625c43.766,20.836,90.22,11.911,128.177,4.619c15.469-2.972,30.082-5.78,41.467-5.78
+                                                  c38.684,0,76.89,32.795,77.266,33.121c0.032,0.028,0.068,0.049,0.099,0.077c0.041,0.036,0.078,0.073,0.119,0.108l27.983,22.8
+                                                  c1.595,1.299,3.514,1.932,5.422,1.932c2.494,0,4.967-1.08,6.666-3.165c2.997-3.679,2.445-9.091-1.234-12.089l-22.736-18.526
+                                                  c11.715-23.321,25.616-37.41,40.431-40.869c16.078-3.755,29.462,5.823,31.279,7.201c8.903,8.774,18.417,13.5,26.954,15.953
+                                                  C401.715,228.558,394.169,249.698,397.177,271.318z M438.891,151.033c-1.166-7.893-0.1-15.972,3.185-23.46
+                                                  c3.285-7.487,8.506-13.744,15.104-18.232c1.166,7.893,0.1,15.972-3.185,23.46C450.709,140.29,445.488,146.546,438.891,151.033z"></path>
+                                          </g>
+                                      </g>
+                                              <circle cx="367.222" cy="221.463" r="8.592"></circle>
+                                      </svg>
+                     </i>
+                  </div>
+                  <div>
+                    <a href="#!">Community</a>
+                    <p>Lorem ipsum dolor sit amet, comp or incididunt ut labo enim ad unt ut labo enim ad mini.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="educ_cours">
+              <div class="courses hoverimg">
+                <figure>
+                  <img src="https://winsfolio.net/html/ibadah/assets/img/donation-img-2.jpg" alt="">
+                </figure>
+                <div class="community-text">
+                  <div>
+                    <i>
+                    <svg version="1.1" id="svg2055" xml:space="preserve" width="682.66669" height="682.66669" viewBox="0 0 682.66669 682.66669" xmlns="http://www.w3.org/2000/svg"><defs id="defs2059"><clipPath clipPathUnits="userSpaceOnUse" id="clipPath2073"><path d="M 0,512 H 512 V 0 H 0 Z" id="path2071"></path></clipPath></defs><g id="g2061" transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)"><g id="g2063" transform="translate(256.002,107.5928)"><path d="M 0,0 92.382,-47.597" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path2065"></path></g><g id="g2067"><g id="g2069" clip-path="url(#clipPath2073)"><g id="g2075" transform="translate(255.999,172.2031)"><path d="m 0,0 -243.464,100.096 c -2.385,0.98 -5.002,-0.773 -5.002,-3.352 V 65.613 c 0,-1.357 0.758,-2.6 1.964,-3.221 L -70.397,-28.34" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path2077"></path></g><g id="g2079" transform="translate(379.5791,43.9238)"><path d="m 0,0 45.684,-23.537 c 0.804,-0.414 1.736,-0.513 2.609,-0.275 l 27.491,7.467 c 0.768,0.208 1.583,0.158 2.32,-0.142 l 41.791,-17.058 c 2.383,-0.973 4.993,0.78 4.993,3.355 v 53.889 c 0,1.469 -0.887,2.793 -2.246,3.351 L -52.785,99.174" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path2081"></path></g><g id="g2083" transform="translate(9.7793,70.9741)"><path d="m 0,0 489.686,201.325 c 2.384,0.98 5.001,-0.773 5.001,-3.352 v -31.131 c 0,-1.357 -0.757,-2.6 -1.963,-3.221 L 76.958,-50.587 c -0.805,-0.414 -1.736,-0.513 -2.609,-0.276 l -27.492,7.467 c -0.767,0.209 -1.583,0.159 -2.319,-0.142 L 2.747,-60.595 c -2.384,-0.973 -4.993,0.78 -4.993,3.355 v 53.888 c 0,1.47 0.887,2.793 2.246,3.352 z" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path2085"></path></g><g id="g2087" transform="translate(266,143.0972)"><path d="m 0,0 c 0,-5.523 -4.478,-10 -10,-10 -5.522,0 -10,4.477 -10,10 0,5.523 4.478,10 10,10 C -4.478,10 0,5.523 0,0" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path2089"></path></g><g id="g2091" transform="translate(256,208.4199)"><path d="m 0,0 -205.528,80.97 c -3.146,1.239 -6.551,-1.08 -6.551,-4.461 V 50.975 L 0,-36.217 212.079,50.975 v 25.534 c 0,3.381 -3.405,5.7 -6.551,4.461 z" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path2093"></path></g><g id="g2095" transform="translate(149.4482,309.9321)"><path d="m 0,0 c -14.219,1.945 -28.625,2.348 -42.955,1.208 -10.287,-0.817 -23.044,-0.615 -32.51,3.561 -1.977,0.872 -4.202,-0.525 -4.202,-2.686 v -30.232 l 186.219,-73.363 v 47.735 c 0,0 -13.253,29.173 -73.385,46.585" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path2097"></path></g><g id="g2099" transform="translate(139.6553,283.291)"><path d="M 0,0 C 0,0 68.76,-14.03 116.345,-50.89" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path2101"></path></g><g id="g2103" transform="translate(442.2187,312.0146)"><path d="m 0,0 v -30.232 l -186.219,-73.363 v 47.736 c 0,0 15.972,35.158 92.406,51.317 18.752,3.965 37.995,5.187 57.101,3.668 10.287,-0.818 23.044,-0.616 32.51,3.56 C -2.225,3.559 0,2.162 0,0 Z" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path2105"></path></g><g id="g2107" transform="translate(372.3447,283.291)"><path d="M 0,0 C 0,0 -68.76,-14.03 -116.345,-50.89" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path2109"></path></g><g id="g2111" transform="translate(303.5596,452.8174)"><path d="m 0,0 c 0,-5.523 -4.478,-10 -10,-10 -5.523,0 -10,4.477 -10,10 0,5.523 4.477,10 10,10 C -4.478,10 0,5.523 0,0" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path2113"></path></g><g id="g2115" transform="translate(334.1777,452.8174)"><path d="m 0,0 c 0,-5.523 -4.477,-10 -10,-10 -5.522,0 -10,4.477 -10,10 0,5.523 4.478,10 10,10 C -4.477,10 0,5.523 0,0" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path2117"></path></g><g id="g2119" transform="translate(378.3437,435.1978)"><path d="M 0,0 V -86.025" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path2121"></path></g><g id="g2123" transform="translate(147.0088,435.1978)"><path d="M 0,0 V -86.025" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path2125"></path></g><g id="g2127" transform="translate(324.5977,392.6606)"><path d="m 0,0 c -11.548,-5.472 -31.677,-4.554 -36.021,10.17 -2.893,9.809 4.375,19.19 13.49,21.927 C -3.647,37.769 6.784,20.553 6.937,3.812 7.164,-20.914 -11.739,-31.806 -33.76,-33.939 c -12.856,-1.246 -25.615,3.071 -35.511,10.891" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path2129"></path></g><g id="g2131" transform="translate(245.7812,411.5166)"><path d="m 0,0 c 0.896,-4.418 1.791,-8.836 2.687,-13.254 1.674,-8.267 3.358,-16.634 2.976,-25.06 -0.383,-8.425 -3.051,-17.051 -8.99,-23.04 -10.059,-10.143 -34.873,-13.691 -47.489,-6.72 -13.32,7.36 -15.865,24.976 -3.805,34.791" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path2133"></path></g><g id="g2135" transform="translate(151.1191,501.5239)"><path d="m 0,0 c -10.49,2.404 -20.33,-7.28 -15.954,-18.577 3.885,-10.032 16.015,-10.943 25.196,-10.289 0,0 -14.009,-7.289 -26.705,-12.782" style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" id="path2137"></path></g></g></g></g></svg>
+                    </i>
+                  </div>
+                  <div>
+                    <a href="#!">Education</a>
+                    <p>Lorem ipsum dolor sit amet, comp or incididunt ut labo enim ad unt ut labo enim ad mini.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="educ_cours">
+              <div class="courses hoverimg">
+                <figure>
+                  <img src="https://winsfolio.net/html/ibadah/assets/img/donation-img-3.jpg" alt="">
+                </figure>
+                <div class="community-text">
+                  <div>
+                    <i>
+                                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512">
+                                      <g>
+                                          <path style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+          M256,68.904c11.785-13.351,29.016-21.77,48.2-21.77c35.467,0,64.267,28.792,64.267,64.267C368.467,175.667,256,223.867,256,223.867
+          s-112.467-48.2-112.467-112.467c0-35.475,28.799-64.267,64.267-64.267C226.984,47.133,244.215,55.552,256,68.904z"></path>
+                                          
+                                              <line style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="448.8" y1="15" x2="416.667" y2="31.067"></line>
+                                          
+                                              <line style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="63.2" y1="15" x2="95.333" y2="31.067"></line>
+                                          
+                                              <line style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="448.8" y1="223.867" x2="416.667" y2="207.8"></line>
+                                          
+                                              <line style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="63.2" y1="223.867" x2="95.333" y2="207.8"></line>
+                                          
+                                              <line style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="464.867" y1="119.433" x2="432.733" y2="119.433"></line>
+                                          
+                                              <line style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="368.467" y1="432.733" x2="336.333" y2="432.733"></line>
+                                          
+                                              <line style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="47.133" y1="119.433" x2="79.267" y2="119.433"></line>
+                                          
+                                              <rect x="79.267" y="352.4" style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" width="353.467" height="144.6"></rect>
+                                          
+                                              <polygon style="fill:none;stroke:#000000;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+          432.733,288.133 79.267,288.133 15,352.4 497,352.4 	"></polygon>
+                                      </g>
+                                      </svg>
+                     </i>
+                  </div>
+                  <div>
+                    <a href="#!">Donation</a>
+                    <p>Lorem ipsum dolor sit amet, comp or incididunt ut labo enim ad unt ut labo enim ad mini.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+      
+          </div>
+        </div>
+      </section>
+       <section class="our-courses-section sec_gap" >
+        <div class="container">
+            <div class="ourcours_h">
+                <img src="https://winsfolio.net/html/ibadah/assets/img/heading-img.png" alt="">
+                <p>Islamic Classes and Courses</p>
+                <h2>Our Courses</h2>
+            </div>
+            <div class="cours_row">
+                <div class="">
+                    <div class="courses">
+                        <div class="courses-img">
+                            <figure>
+                                <img src="https://winsfolio.net/html/ibadah/assets/img/courses-1.jpg" alt="">
+                            </figure>
+                            <a href="#!"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="scholar">
+                            <img src="https://winsfolio.net/html/ibadah/assets/img/scholar.jpg" alt="">
+                            <div>
+                                <h4>Habib Al Noor</h4>
+                                <span>Arabic scholar</span>
+                            </div>
+                        </div>
+                        <div class="courses-text">
+                            <a href="#!">Quran Intermediate Course Brother</a>
+                            <h4>$16.00</h4>
+                            <span>Course Free</span>
+                        </div>
+                        <div class="courses-weeks">
+                            <h6>10 weeks</h6>
+                            <div class="border"></div>
+                            <h6>50 enroll</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="courses">
+                        <div class="courses-img">
+                            <figure>
+                                <img src="https://winsfolio.net/html/ibadah/assets/img/courses-2.jpg" alt="">
+                            </figure>
+                            <a href="#!"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="scholar">
+                            <img src="https://winsfolio.net/html/ibadah/assets/img/scholar.jpg" alt="">
+                            <div>
+                                <h4>Habib Al Noor</h4>
+                                <span>Arabic scholar</span>
+                            </div>
+                        </div>
+                        <div class="courses-text">
+                            <a href="#!">Quran Intermediate Course Brother</a>
+                            <h4>$16.00</h4>
+                            <span>Course Free</span>
+                        </div>
+                        <div class="courses-weeks">
+                            <h6>10 weeks</h6>
+                            <div class="border"></div>
+                            <h6>50 enroll</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="courses">
+                        <div class="courses-img">
+                            <figure>
+                                <img src="https://winsfolio.net/html/ibadah/assets/img/courses-3.jpg" alt="">
+                            </figure>
+                            <a href="#!"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="scholar">
+                            <img src="https://winsfolio.net/html/ibadah/assets/img/scholar.jpg" alt="">
+                            <div>
+                                <h4>Habib Al Noor</h4>
+                                <span>Arabic scholar</span>
+                            </div>
+                        </div>
+                        <div class="courses-text">
+                            <a href="#!">Quran Intermediate Course Brother</a>
+                            <h4>$16.00</h4>
+                            <span>Course Free</span>
+                        </div>
+                        <div class="courses-weeks">
+                            <h6>10 weeks</h6>
+                            <div class="border"></div>
+                            <h6>50 enroll</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="courses">
+                        <div class="courses-img">
+                            <figure>
+                                <img src="https://winsfolio.net/html/ibadah/assets/img/courses-4.jpg" alt="">
+                            </figure>
+                            <a href="#!"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="scholar">
+                            <img src="https://winsfolio.net/html/ibadah/assets/img/scholar.jpg" alt="">
+                            <div>
+                                <h4>Habib Al Noor</h4>
+                                <span>Arabic scholar</span>
+                            </div>
+                        </div>
+                        <div class="courses-text">
+                            <a href="#!">Quran Intermediate Course Brother</a>
+                            <h4>$16.00</h4>
+                            <span>Course Free</span>
+                        </div>
+                        <div class="courses-weeks">
+                            <h6>10 weeks</h6>
+                            <div class="border"></div>
+                            <h6>50 enroll</h6>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="logos-heading">
+                    <h3>Subscribe via Your <span>Preferred Podcast App.</span></h3>
+                    <ul class="logos">
+                        <li><img src="https://winsfolio.net/html/ibadah/assets/img/logos-1.png" alt="icon"></li>
+                        <li><img src="https://winsfolio.net/html/ibadah/assets/img/logos-2.png" alt="icon"></li>
+                        <li><img src="https://winsfolio.net/html/ibadah/assets/img/logos-3.png" alt="icon"></li>
+                    </ul>
+                </div>
+        </div>
+        </section>
+           <section class="listen-holy">
+            <div class="container">
+                    <div class="listen_item">
+                        <div class="listen_item_info">
+                          <div class="listen_quran">
+                            <p>Listen Holy Quran</p>
+                            <h2>Recite & Listen the Holy Quran Online</h2>
+                            <h6>
+                              Duis aute irure dolor in reprehenit in voluptate velit esse cillum
+                              dolo re eu fugiat nulla pariatur.
+                            </h6>
+                            <div class="wrapper">
+                                <h4>Surah Falaq</h4>
+                                <h5>(Abd-ur-Rahman)</h5>
+                                <audio id="audio" style="width: 0; height: 0; visibility: hidden;">
+                                  <source src="./audio/surah-al-falaq.mp3" type="audio/mpeg">
+                                  Your browser does not support the audio element.
+                                </audio>
+                                
+                                <div class="audioplayer">
+                                  <div class="audioplayer-playpause">
+                                    <a id="playPauseButton" href="#!">
+                                      <i id="playPauseIcon" class="fas fa-play"></i>
+                                    </a>
+                                  </div>
+                                  <div class="audioplayer-time audioplayer-time-current" id="currentTime">0:00</div>
+                                  <div class="progress-container">
+                                    <div class="audio-progress" id="progressBar"></div>
+                                  </div>
+                                  <div class="audioplayer-time audioplayer-time-duration" id="totalTime">0:00</div>
+                                  <div class="audioplayer-volume">
+                                    <div id="volumeButton" class="audioplayer-volume-button">
+                                      <a href="#!"><i id="volumeIcon" class="fas fa-volume-up"></i></a>
+                                    </div>
+                                    <input
+                                      id="volumeControl"
+                                      type="range"
+                                      min="0"
+                                      max="1"
+                                      step="0.01"
+                                      value="1"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="listen_support">
+                          <div class="support-us">
+                            <h4>Support us, we need your help.</h4>
+                            <div class="progressbar">
+                              <div class="circle" data-parent="85">
+                                <canvas
+                                  width="175"
+                                  height="175"
+                                  style="height: 140px; width: 140px"
+                                >
+                                </canvas>
+                                <div>85%</div>
+                              </div> 
+                            </div>
+                            <h6>$71,000</h6>
+                            <span>Donation Collected</span>
+                            <a href="#!" ref="btn" class="listen_btn">Donate Now</a>
+                          </div>
+                        </div>
+                      </div>
+             
+            </div>
+          </section>
+          <section class="pillars_gap">
+            <div class="container">
+                <div class="pillars_h">
+                    <img src="https://winsfolio.net/html/ibadah/assets/img/heading-img.png" alt="">
+                    <p>Islamic Classes and Courses</p>
+                    <h2>Pillars of Islam </h2>
+                </div>
+                <div class="pillars">
+                    <div class="pillars-name">
+                        <figure><img src="https://winsfolio.net/html/ibadah/assets/img/pillars-name-1.png" alt=""></figure>
+                        <img src="https://winsfolio.net/html/ibadah/assets/img/pillars-1.jpg" alt="">
+                        <a href="#!">Shahadah</a>
+                        <span> ( Faith ) </span>
+                    </div>
+                    <div class="pillars-name">
+                        <figure><img src="https://winsfolio.net/html/ibadah/assets/img/pillars-name-2.png" alt=""></figure>
+                        <img src="https://winsfolio.net/html/ibadah/assets/img/pillars-2.jpg" alt="">
+                        <a href="#!">Salah</a>
+                        <span>  ( Prayer )  </span>
+                    </div>
+                    <div class="pillars-name">
+                        <figure><img src="https://winsfolio.net/html/ibadah/assets/img/pillars-name-3.png" alt=""></figure>
+                        <img src="https://winsfolio.net/html/ibadah/assets/img/pillars-3.jpg" alt="">
+                        <a href="#!">Sawm</a>
+                        <span>  ( Fasting ) </span>
+                    </div>
+                    <div class="pillars-name">
+                        <figure><img src="https://winsfolio.net/html/ibadah/assets/img/pillars-name-3.png" alt=""></figure>
+                        <img src="https://winsfolio.net/html/ibadah/assets/img/pillars-4.jpg" alt="">
+                        <a href="#!">Zakat</a>
+                        <span>  ( Almsgiving ) </span>
+                    </div>
+                    <div class="pillars-name">
+                        <figure><img src="https://winsfolio.net/html/ibadah/assets/img/pillars-name-5.png" alt=""></figure>
+                        <img src="https://winsfolio.net/html/ibadah/assets/img/pillars-5.jpg" alt="">
+                        <a href="#!">Hajj</a>
+                        <span>  ( Pilgrimage )  </span>
+                    </div>
+                </div>
+              
+            </div>
+        </section>
+         <section>
+            <div class="container">
+              <div class="fun-facts" ref="item">
+                <div class="islamic-mosque" >
+                  <div class="count-style">
+                    <h2 data-max="62" class="ms-animated">0<sup>+</sup></h2>
+                  </div>
+                  <h5>Islamic Mosque</h5>
+                  <img src="https://winsfolio.net/html/ibadah/assets/img/fun-facts-1.png" alt="" />
+                </div>
+                <div class="islamic-mosque">
+                  <div class="count-style">
+                    <h2 data-max="14" class="ms-animated">0<sup>K</sup></h2>
+                  </div>
+                  <h5>Learning Students</h5>
+                  <img src="https://winsfolio.net/html/ibadah/assets/img/fun-facts-2.png" alt="" />
+                </div>
+                <div class="islamic-mosque">
+                  <div class="count-style">
+                    <h2 data-max="317" class="ms-animated">0<sup>+</sup></h2>
+                  </div>
+                  <h5>Inspirational Courses</h5>
+                  <img src="https://winsfolio.net/html/ibadah/assets/img/fun-facts-3.png" alt="" />
+                </div>
+                <div class="islamic-mosque">
+                  <div class="count-style">
+                    <h2 data-max="26" class="ms-animated">0<sup>+</sup></h2>
+                  </div>
+                  <h5>Islamic Scholars</h5>
+                  <img src="https://winsfolio.net/html/ibadah/assets/img/fun-facts-4.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </section>
+           <section class="gap islamic-ayat no-bottom">
+            <div class="container">
+          
+              <div class="ayat_item">
+                <div class="item-box">
+                    <div class="box_heading">
+                        <p>Quranic Verses With Translation</p>
+                        <h2>Islamic ayat with translation</h2>
+                      </div>
+
+                      <div class="owl-carousel">
+                        <div>  <div class="slide-ayat">
+                            <div class="ayat">
+                        <img src="https://winsfolio.net/html/ibadah/assets/img/ayat.png" alt="" />
+                        <h4>
+                          O you who have believed, Seek help through patience and
+                          prayers.
+                        </h4>
+                        <h5>Al-Baqrah (1) : 153</h5>
+                      </div>
+                        </div></div>
+                        <div>  <div class="slide-ayat">
+                            <div class="ayat">
+                        <img src="https://winsfolio.net/html/ibadah/assets/img/ayat.png" alt="" />
+                        <h4>
+                          O you who have believed, Seek help through patience and
+                          prayers.
+                        </h4>
+                        <h5>Al-Baqrah (1) : 153</h5>
+                      </div>
+                        </div> </div>
+                        <div>      <div class="slide-ayat">
+                            <div class="ayat">
+                        <img src="https://winsfolio.net/html/ibadah/assets/img/ayat.png" alt="" />
+                        <h4>
+                          O you who have believed, Seek help through patience and
+                          prayers.
+                        </h4>
+                        <h5>Al-Baqrah (1) : 153</h5>
+                      </div>
+                        </div></div>
+                       
+                      </div>
+                </div>
+                <div class="item-box">
+                  <div class="ayat-img">
+                    <img src="https://winsfolio.net/html/ibadah/assets/img/ayat-with-man.png" alt="img" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img
+              src="https://winsfolio.net/html/ibadah/assets/img/ayat-with.jpg"
+              class="ayat-with-img"
+              alt="ayat-with"
+            />
+          </section>
+          <section class="section-navigating navig_gap" >
+            <div class="container">
+                <div class="navig_item">
+                    <div class="navig_box">
+                        <div class="img-navigating hoverimg">
+                            <figure><img src="https://winsfolio.net/html/ibadah/assets/img/navigating-1.jpg" alt="img"></figure>
+                        </div>
+                        <div class="img-navigating hoverimg">
+                            <figure><img src="https://winsfolio.net/html/ibadah/assets/img/navigating-2.jpg" alt="img"></figure>
+                        </div>
+                    </div>
+                        <div class="navigating-life">
+                            <div class="navig_locat">
+                                <div class="location">
+                                    <i class="far fa-clock"></i>
+                                    <span>Dec 25, 2024 @5:00 PM</span>
+                                </div>
+                                    <div class="location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span> Town 21, United State</span>
+                                    </div>
+            
+                            </div>
+                            <h2>Navigating Life's Journey with Faith</h2>
+                                    <div id="countdown">
+                                        <ul>
+                                            <li><span id="days">9</span>days </li>
+                                            <li><span id="hours">9</span>Hour</li>
+                                            <li><span id="minutes">35</span>Min</li>
+                                            <li class="mb-0"><span id="seconds">8</span>Sec</li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-video ">
+                                        <a href="#!" class="navig_btn">Join Now</a>
+                                        <div class="video">
+                                         <a data-fancybox href="https://www.youtube.com/watch?v=1La4QzGeaaQ"> <i>
+                                               <svg width="15" height="22" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                 <path d="M11 8.5L0.5 0.272758L0.5 16.7272L11 8.5Z" fill="#fff"></path>
+                                               </svg>
+                                            </i> Watch Video</a>
+                                        
+                                        </div>
+                                    </div>
+                       
+            
+            
+                    </div>
+                    
+                </div>
+            </div>
+            </section>
+            <section class="community_gap">
+                <div class="container">
+                  <div class="join-our-community">
+                    <h2>Serving the community, working in partnership</h2>
+                    <p>
+                      We believe that our primary role is to serve the needs of the local
+                      community
+                    </p>
+                    <a href="#!" class="com_btn">Join Our Community</a>
+                    <div class="join-our-img">
+                      <img src="https://winsfolio.net/html/ibadah/assets/img/join-our-1.jpg" alt="img" />
+                      <img src="https://winsfolio.net/html/ibadah/assets/img/join-our-2.jpg" alt="img" />
+                      <img src="https://winsfolio.net/html/ibadah/assets/img/join-our-3.jpg" alt="img" />
+                      <img src="https://winsfolio.net/html/ibadah/assets/img/join-our-4.jpg" alt="img" />
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="gap no-top">
+                <div class="container">
+                    <div class="latest_h">
+                        <img src="https://winsfolio.net/html/ibadah/assets/img/heading-img.png" alt="">
+                        <p>Articles & Updates</p>
+                        <h2>Latest News</h2>
+                    </div>
+                    <div class="latest_item">
+                   <div class="latest_box">
+                    <div class="blog hoverimg">
+                        <h4>26 <span>dec, 2024</span></h4>
+                        <figure><img src="https://winsfolio.net/html/ibadah/assets/img/blog-img-1.jpg" alt=""></figure>
+                        <h5><a href="#!">Embarking on a Journey of Reflection</a></h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisci mod tempor incididunt ut labore et dolore magna minim veniam, quis nostrud exercitation.</p>
+                        <div class="blog-man">
+                            <img src="https://winsfolio.net/html/ibadah/assets/img/blog-man.jpg" alt="img" class="me-3">
+                            <h6>by <a href="#!">Thomas Walimes</a></h6>
+                        </div>
+                    </div>
+                   </div>
+                   <div class="latest_box">
+                    <div class="blog hoverimg">
+                        <h4>26 <span>dec, 2024</span></h4>
+                        <figure><img src="https://winsfolio.net/html/ibadah/assets/img/blog-img-2.jpg" alt=""></figure>
+                        <h5><a href="#!">Embarking on a Journey of Reflection</a></h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisci mod tempor incididunt ut labore et dolore magna minim veniam, quis nostrud exercitation.</p>
+                        <div class="blog-man d-flex align-items-center">
+                            <img src="https://winsfolio.net/html/ibadah/assets/img/blog-man.jpg" alt="img" class="me-3">
+                            <h6>by <a href="#!">Thomas Walimes</a></h6>
+                        </div>
+                    </div>
+                   </div>
+                   <div class="latest_box">
+                    <div class="blog hoverimg">
+                        <h4>26 <span>dec, 2024</span></h4>
+                        <figure><img src="https://winsfolio.net/html/ibadah/assets/img/blog-img-3.jpg" alt=""></figure>
+                        <h5><a href="#!">Embarking on a Journey of Reflection</a></h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisci mod tempor incididunt ut labore et dolore magna minim veniam, quis nostrud exercitation.</p>
+                        <div class="blog-man d-flex align-items-center">
+                            <img src="https://winsfolio.net/html/ibadah/assets/img/blog-man.jpg" alt="img" class="me-3">
+                            <h6>by <a href="#!">Thomas Walimes</a></h6>
+                        </div>
+                    </div>
+                   </div>
+                    </div>
+                </div>
+                </section>
+                <section class="sec_footer">
+                    <div class="container">
+                            <div class="footer-top">
+                                <div class=" footer_item">
+                                    <div class=" ">
+                                        <div class="footer-logo">
+                                            <img src="https://winsfolio.net/html/ibadah/assets/img/logo.png" alt="logo">
+                                            <h3>Islamic community centre</h3>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="connect-with">
+                                            <h4>Connect with us</h4>
+                                            <ul class="footer_social-media">
+                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="connect-with">
+                                            <h4>Subscribe Newsletter</h4>
+                                            <form action="" class="subscribe">
+                                              <input type="text" name="email" placeholder="Enter your email address..." id="">
+                                              <button class="sub_btn">Subscribe</button>
+                
+                                            </form>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                            <div class="Information ">
+                                        <div class="info_box">
+                                            <div class="widget-title">
+                                                <h3>Information</h3>
+                                                <p>Lorem ipsum, or lipsum as it is some
+                                        times  known, is dummy text used in 
+                                        laying out pri nt, graphic or web lirm
+                                        Lorem ipsum, or lip designs.</p>
+                                            </div>
+                                        </div>
+                                        <div class="info_box">
+                                            <div class="Information widget-title">
+                                             <h3>Contact info</h3>
+                                             <div class="contact-info">
+                                                <i>
+                                                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"><path d="m31.965 23.341h-2.992l2.965-2.991c1.005-1.014 1.302-2.534.757-3.873-.526-1.293-1.705-2.11-3.14-2.133-2.196 0-3.982 1.786-3.982 3.981 0 .552.448 1 1 1s1-.448 1-1c0-1.092.889-1.981 2.014-1.981.812.013 1.147.625 1.254.887.193.474.209 1.172-.325 1.71l-4.655 4.695c-.284.287-.368.716-.213 1.089s.519.615.923.615h5.392c.552 0 1-.448 1-1s-.448-1-1-1z"></path><path d="m37.2 24.34c0 .552.448 1 1 1s1-.448 1-1v-8.999c0-.429-.274-.811-.681-.948s-.856 0-1.115.342l-4.887 6.428c-.23.303-.269.709-.1 1.05s.516.556.896.556h3.887zm-1.871-3.571 1.871-2.46v2.46z"></path><path d="m49.348 26.73h-6.066c-.552 0-1 .448-1 1s.448 1 1 1h4.186l-5.015 7.441c-.309.458-.188 1.08.27 1.388.171.116.366.171.558.171.321 0 .637-.155.83-.441l6.066-9c.207-.307.228-.702.054-1.029-.173-.326-.513-.53-.883-.53z"></path><path d="m46.349 15.547c-.488-.257-1.093-.068-1.35.42l-10.128 19.279c-.257.489-.069 1.093.42 1.35.148.078.307.115.464.115.36 0 .708-.194.886-.535l10.128-19.279c.257-.489.069-1.093-.42-1.35z"></path><path d="m37.3 2c-11.493 0-21.285 7.795-23.974 18.782l-1.047-1.047c-1.398-1.399-3.838-1.399-5.238 0l-1.206 1.206c-.083.083-.153.173-.233.258-.023.019-.052.027-.074.049-.036.036-.052.083-.082.124-4.698 5.131-4.578 13.119.389 18.086l18.708 18.708c2.552 2.553 5.905 3.829 9.258 3.829s6.706-1.276 9.258-3.829l1.206-1.206c.7-.7 1.085-1.63 1.085-2.619s-.385-1.919-1.085-2.619l-1.047-1.047c10.987-2.689 18.782-12.48 18.782-23.974 0-13.62-11.081-24.7-24.7-24.7zm5.551 53.545-1.206 1.206c-4.326 4.326-11.363 4.325-15.688 0l-18.708-18.708c-3.981-3.981-4.288-10.254-.941-14.601l6.589 6.589c.195.195.451.293.707.293s.512-.098.707-.293c.391-.391.391-1.023 0-1.414l-6.662-6.662.806-.806c.322-.322.75-.499 1.205-.499s.883.177 1.205.499l6.232 6.231c.664.665.664 1.746 0 2.41l-1.51 1.51c-1.774 1.774-1.774 4.66 0 6.434l10.671 10.671c1.529 1.53 3.883 1.733 5.64.625l6.732 6.732c.195.195.451.293.707.293s.512-.098.707-.293c.391-.391.391-1.023 0-1.414l-6.648-6.648.806-.806c.664-.664 1.746-.664 2.41 0l6.239 6.24c.322.322.499.75.499 1.205s-.177.883-.499 1.205zm-1.317-6.555-3.508-3.508c-1.443-1.444-3.793-1.443-5.238 0l-1.51 1.51c-.995.995-2.612.994-3.606 0l-10.671-10.671c-.994-.994-.994-2.612 0-3.606l1.51-1.51c1.444-1.444 1.444-3.794 0-5.238l-3.501-3.5c2.026-10.726 11.311-18.466 22.29-18.466 12.517 0 22.7 10.183 22.7 22.7 0 10.978-7.74 20.264-18.466 22.29z"></path></svg>
+                                               </i>
+                                                <div>
+                                                    <h5>Phone no:</h5>
+                                                    <a href="callto:+254 (98) 2156 213">+254 (98) 2156 213</a>
+                                                </div>
+                                             </div>
+                                             <div class="contact-info">
+                                                <i>
+                                          <svg fill="none" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><g clip-rule="evenodd" fill="rgb(0,0,0)" fill-rule="evenodd"><path d="m9 10c-1.65685 0-3 1.3431-3 3v22c0 1.6569 1.34315 3 3 3h30c1.6569 0 3-1.3431 3-3v-17c0-.5523.4477-1 1-1s1 .4477 1 1v17c0 2.7614-2.2386 5-5 5h-30c-2.76142 0-5-2.2386-5-5v-22c0-2.7614 2.23858-5 5-5h22c.5523 0 1 .44772 1 1s-.4477 1-1 1z"></path><path d="m13.2929 16.2929c.3905-.3905 1.0237-.3905 1.4142 0l8.5858 8.5858c.3905.3905 1.0237.3905 1.4142 0l8.5858-8.5858c.3905-.3905 1.0237-.3905 1.4142 0s.3905 1.0237 0 1.4142l-8.5858 8.5858c-1.1716 1.1716-3.071 1.1716-4.2426 0l-8.5858-8.5858c-.3905-.3905-.3905-1.0237 0-1.4142z"></path><path d="m40 11c1.1046 0 2-.8954 2-2 0-1.10457-.8954-2-2-2s-2 .89543-2 2c0 1.1046.8954 2 2 2zm0 2c2.2091 0 4-1.7909 4-4 0-2.20914-1.7909-4-4-4s-4 1.79086-4 4c0 2.2091 1.7909 4 4 4z"></path></g></svg>
+                                        </i>
+                                                <div>
+                                                    <h5>Email Address: no:</h5>
+                                                    <a href="mailto:username@domain.com">username@domain.com</a>
+                                                </div>
+                                             </div>
+                                             <div class="contact-info">
+                                                <i>
+                                          <svg id="LOCATION" height="512" viewBox="0 0 1800 1800" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m899.993 1556.267 441.512-441.511c8.202-7.819 26.127-26.384 26.893-27.184l.36-.383c110.946-118.997 172.046-274.141 172.046-436.851 0-353.342-287.463-640.805-640.803-640.805-353.342 0-640.805 287.463-640.805 640.805 0 162.714 61.1 317.857 172.038 436.851zm.008-1485.108c319.355 0 579.179 259.818 579.179 579.18 0 146.968-55.159 287.114-155.315 394.639-5.202 5.387-19.292 19.873-25.095 25.383l-398.764 398.739-424.049-424.315c-100.055-107.499-155.137-247.556-155.137-394.446 0-319.362 259.814-579.18 579.181-579.18z" fill="rgb(0,0,0)"></path></g><g><path d="m998.745 225.279c110.577 0 325.781 120.91 325.781 342.553 0 17.018 13.789 30.812 30.812 30.812 17.014 0 30.812-13.794 30.812-30.812 0-115.37-50.989-222.331-143.563-301.184-73.464-62.566-169.175-102.994-243.842-102.994-17.014 0-30.812 13.794-30.812 30.813s13.798 30.812 30.812 30.812z" fill="rgb(0,0,0)"></path></g><g><path d="m1286.716 1361.056c-24.003-9.809-49.854-18.548-77.134-26.264l-50.474 50.478c148.765 35.502 240.488 98.79 240.488 157.599 0 87.962-205.171 185.974-499.596 185.974-294.417 0-499.597-98.012-499.597-185.974 0-58.805 91.723-122.097 240.488-157.599l-50.478-50.478c-27.271 7.716-53.126 16.455-77.121 26.264-112.537 45.995-174.513 110.563-174.513 181.813s61.977 135.817 174.513 181.813c103.793 42.422 241.128 65.785 386.708 65.785 145.582 0 282.921-23.363 386.715-65.785 112.536-45.995 174.504-110.563 174.504-181.813s-61.967-135.818-174.503-181.813z" fill="rgb(0,0,0)"></path></g><g><path d="m901.771 945.221c-171.172 0-310.434-139.256-310.434-310.425s139.262-310.426 310.434-310.426 310.434 139.256 310.434 310.425-139.262 310.426-310.434 310.426zm0-559.226c-137.193 0-248.809 111.612-248.809 248.801s111.616 248.801 248.809 248.801c137.192 0 248.809-111.612 248.809-248.801s-111.616-248.801-248.809-248.801z" fill="rgb(0,0,0)"></path></g></g></svg>
+                                        </i>
+                                                <div>
+                                                    <h5>380 St Kilda Road, Jackson New Store, United State</h5>
+                                                </div>
+                                             </div>
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="info_box">
+                                                <div class="widget-title">
+                                                    <h3>Quick Links</h3>
+                                                    <ul>
+                                                        <li><i class="fas fa-angle-right"></i><a href="our-courses.html">Online Courses</a></li>
+                                                        <li><i class="fas fa-angle-right"></i><a href="#!">Audio Listening</a></li>
+                                                        <li><i class="fas fa-angle-right"></i><a href="#!">Sehri & Iftar</a></li>
+                                                        <li><i class="fas fa-angle-right"></i><a href="#!">Our Events</a></li>
+                                                        <li><i class="fas fa-angle-right"></i><a href="#!">Quran Hifz Classes</a></li>
+                                                        <li><i class="fas fa-angle-right"></i><a href="#!">About Ibadat</a></li>
+                                                        <li><i class="fas fa-angle-right"></i><a href="#!">Our Services</a></li>
+                                                        <li><i class="fas fa-angle-right"></i><a href="#!">Quran Hifz Classes</a></li>
+                                                        <li class="pb-0"><i class="fas fa-angle-right"></i><a href="#!">Urgent Donation</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                      
+                                    </div>
+                                    <div class="wpo-lower-footer">
+                                            <p>Copyright © <a href="#!"> <b>Ibadah</b></a>2024 . All rights reserved. </p>
+                                            <div class="wpo_info">
+                                                <a href="#!"> Terms and Conditions</a>
+                                                <div class="border"></div>
+                                                <a href="#!">Privacy Policy</a> 
+                                            </div>
+                                        </div>
+                        </div>
+                   </section>      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      
+    <script src="./script.js"></script>
+</body>
+</html>
